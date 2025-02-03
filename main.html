@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Mini App</title>
+</head>
+<body>
+    <h1>Hello, Telegram!</h1>
+    <button id="sendData">Send Data</button>
+    <script>
+        const tg = window.Telegram.WebApp;
+        tg.expand(); // Развернуть приложение на весь экран
+
+        document.getElementById('sendData').addEventListener('click', () => {
+            tg.sendData(JSON.stringify({ message: 'Hello from Mini App!' }));
+        });
+    </script>
+</body>
+</html>
