@@ -2,7 +2,8 @@
 const tg = window.Telegram.WebApp;
 
 // Развернуть приложение на весь экран
-tg.isFullscreen ();
+tg.expand();
+tg.isFullscreen();
 
 // Получить данные пользователя
 const user = tg.initDataUnsafe.user;
